@@ -1,1 +1,40 @@
-<h1>test</h1>
+
+<html>
+    <head>
+        <title>Docker Node</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        
+        <div class="container-fluid">
+            <form>
+
+                <div class="form-group row m-2">
+                    <label for="name" class="col-sm-4 text-sm-end">Name :</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" id="name" type="text"/>
+                    </div>
+                </div>
+                    
+                <div class="row m-2">
+                    <div class="offset-sm-4 col-sm-6">
+                     <input type="submit" class="btn btn-outline-success" value="send"/>
+                    </div>
+                </div>       
+            </form>
+    
+            <div class="row">
+                <div class="offset-sm-4 col-sm-6">
+                    <div class="card m-3">
+                        <div class="card-header bg-primary text-white">
+                            <span id="message"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
