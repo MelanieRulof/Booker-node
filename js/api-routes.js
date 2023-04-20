@@ -5,13 +5,7 @@ apiRouter.route("/booker-node/api").post(function(req, res, next){
     var input = req.body;
 
     console.log(input);
-    
-    if(input!=""){
-        var message = `Bonjour ${input['nom']}, vous êtes bien matinal`
-    } else {
-        message = `Bonjour, vous avez oublié votre nom !`
-    }
-    
+    var message = `Bonjour ${input['nom']}, vous êtes bien matinal`
     res.send(message);
 })
 
