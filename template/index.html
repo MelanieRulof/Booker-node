@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>Docker Node</title>
@@ -6,14 +5,13 @@
     </head>
 
     <body>
-        
         <div class="container-fluid">
-            <form>
+            <form action="/booker-node/api" method="post">
 
                 <div class="form-group row m-2">
                     <label for="name" class="col-sm-4 text-sm-end">Name :</label>
                     <div class="col-sm-6">
-                        <input class="form-control" id="name" type="text"/>
+                        <input class="form-control" id="name" value="nom" type="text" name="nName"/>
                     </div>
                 </div>
                     
@@ -37,4 +35,3 @@
         
     </body>
 </html>
-
