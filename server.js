@@ -2,12 +2,15 @@ import express from "express";
 import apiRoutes from "./js/api-routes.js"
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import bodyParser from "body-parser";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 var app = express();
 
 var jsonParser = express.json({ extended: true });
 app.use(jsonParser);
+
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/template", express.static(__dirname + "/template"));
 
