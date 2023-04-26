@@ -10,6 +10,8 @@ WORKDIR /app
 
 RUN npm install
 
+EXPOSE 8282
+
 COPY . .
 
 CMD ["node", "server.js"]
