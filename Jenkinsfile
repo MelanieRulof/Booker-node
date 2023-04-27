@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh 'npm install'
+                sh 'install'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npm test'
+                sh 'test'
             }
         }
     }
