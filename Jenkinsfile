@@ -1,21 +1,14 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
-                sh "'${mvnHome}/bin/mvn'"
-                  }
-        }
-        
-        stage('Test') {
-            steps {
-                sh "'${mvnHome}/bin/mvn' test"
+                sh 'npm install'
             }
         }
-        stage('Deploy') {
+        stage('Test') {
             steps {
-                archiveArtifacts 'target/*.jar'
+                sh 'npm test'
             }
         }
     }
