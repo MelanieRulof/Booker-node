@@ -10,12 +10,12 @@ pipeline {
         
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh "'${mvnHome}/bin/mvn' test"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                archiveArtifacts 'target/*.jar'
             }
         }
     }
